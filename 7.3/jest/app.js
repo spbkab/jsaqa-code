@@ -1,14 +1,26 @@
-function sortByName(inputArray) {
-  inputArray.sort(function (a, b) {
-    var nameA = a.toLowerCase(),
-      nameB = b.toLowerCase();
-    if (nameA < nameB)
-      //сортируем названия по возрастанию
-      return -1;
-    if (nameA > nameB) return 1;
-    return 0; // нет сортировки
-  });
-  return inputArray;
+// app.js
+function exampleFunction(condition) {
+  if (condition) {
+    return 'Condition is true';
+  } else {
+    return 'Condition is false';
+  }
 }
 
-exports.sortByName = sortByName;
+function anotherFunction() {
+  const result = 2 + 2;
+  return result;
+}
+
+// test/unit/app.test.js
+test('exampleFunction returns correct value for true condition', () => {
+  expect(exampleFunction(true)).toBe('Condition is true');
+});
+
+test('exampleFunction returns correct value for false condition', () => {
+  expect(exampleFunction(false)).toBe('Condition is false');
+});
+
+test('anotherFunction returns correct result', () => {
+  expect(anotherFunction()).toBe(4);
+});
